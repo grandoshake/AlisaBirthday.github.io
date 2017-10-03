@@ -42,7 +42,7 @@ body {
  
   margin: 0;
   padding: 0;
-  background: var(--background-gradient);
+ 
 }
 
 .spinner {
@@ -633,7 +633,7 @@ a:hover
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
     <script >
-    // set and cache variables
+   
 		var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
 		var mouseX = 0;
 		var mouseY = 0;
@@ -641,14 +641,12 @@ a:hover
 		var addX = 0;
 		
 		
-		// fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
-		// no need to create my own :)
+		
 		var fps_counter = {
 			
 			tick: function () 
 			{
-				// this has to clone the array every tick so that
-				// separate instances won't share state 
+				
 				this.times = this.times.concat(+new Date());
 				var seconds, times = this.times;
         
@@ -692,7 +690,7 @@ a:hover
 				var $item = item.eq(i);
 				var $block = $item.find('.carouselItemInner');
 				
-        //thanks @chrisgannon!        
+         
         TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
 				
 				animateIn( $item, $block )						
@@ -729,7 +727,7 @@ a:hover
 			mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
 		}
 		
-		// loops and sets the carousel 3d properties
+		
 		function looper()
 		{
 			addX += mouseX
